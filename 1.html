@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+  <script type="text/javascript">
+    function insert(num)
+    {
+               document.form1.textview.value = document.form1.textview.value+num;
+    }
+    function backspace()
+    {
+     var x=document.form1.textview.value;
+     document.form1.textview.value=x.substring(0,x.length-1);
+    }
+    function cal()
+    {
+     var x=document.form1.textview.value;
+    
+     document.form1.textview.value=eval(x);
+    }
+  </script>  
+</head>
+<body>
+    <center><div id="i2"><h1>CALCULATOR</h1></div></center>
+    <div class="container">
+    <div  id="i1">
+        <form name="form1">
+            <center><input type="textview" id="t1" name="textview"></center>
+            <input type="reset" class="bt" value="AC" name="f1">
+            <input type="button" class="bt" name="b1" onclick = "backspace()" value="B">
+            <input type="button" class="bt" name="b1" onclick = "insert('.')" value=".">
+            <input type="button" class="bt2" name="b1" onclick = "insert('+')" value="+">
+           
+            <input type="button" class="bt" name="b1" onclick = "insert(1)" value="1">
+            <input type="button" class="bt" name="b1" onclick = "insert(2)" value="2">
+            <input type="button" class="bt" name="b1" onclick = "insert(3)" value="3">
+            <input type="button" class="bt2" name="b1"onclick =  "insert('-')" value="-"> 
+            <input type="button" class="bt" name="b1" onclick = "insert(4)" value="4">
+            <input type="button" class="bt" name="b1" onclick = "insert(5)" value="5">
+            <input type="button" class="bt" name="b1" onclick = "insert(6)" value="6">
+            <input type="button" class="bt2" name="b1" onclick = "insert('*')" value="x">
+            <input type="button" class="bt" name="b1" onclick = "insert(7)" value="7">
+            <input type="button" class="bt" name="b1" onclick = "insert(8)" value="8">
+            <input type="button" class="bt" name="b1" onclick = "insert(9)" value="9">
+            
+            <input type="button" class="bt2" name="b1" onclick = "insert('/')" value="/"> 
+            <input type="button" class="bt1" name="b1" onclick = "insert(0)"value="0">
+            <input type="button" class="bt2" name="b1" onclick = "cal()" value="=">
+                     
+            
+        </form>        
+    </div>
+    </div>
+</body>
+</html>
